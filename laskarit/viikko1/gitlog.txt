@@ -1,0 +1,113 @@
+commit 9361f2683d40139b42062caf7337fc32e7fa4a4a
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:55:08 2021 +0200
+
+    poistettu file1 ja muutettu nimi file2 file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6cd4a846321d0b2552b87ea712e2f329c6adcabc
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:50:08 2021 +0200
+
+    luotu tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a48edfd4ef783a6c01d61399fc5c3fcd90067e86
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:44:02 2021 +0200
+
+    muutoksia eka.txt ja kolmas.txt
+
+ eka.txt    | 3 +--
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+commit 8df81b0c0658f50f4b9102bce9e2ea16d537d179
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:40:58 2021 +0200
+
+    tiedosto.txt nimi muuutettu eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 611a741f0c77795941545af7a9fc3da55a4f7cae
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:38:37 2021 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit e322d893f564ef283349482499266407861a2f43
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:36:17 2021 +0200
+
+    muutos tiedostoon tiedosto.txt
+
+ tiedosto.txt | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+commit d7070802159afa471a6571ec354d047f7409dacc
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:34:28 2021 +0200
+
+    kopioitu tiedostoon tiedosto.txt tekstiä
+
+ tiedosto.txt | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+commit 1f194bbd1ccb9f909e5f7f32b5c3efe344363c9b
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:21:17 2021 +0200
+
+    luotu hakemisto stuff ja sinne jokin.txt
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 530c9f0ba9345249f1f3f6289a4524121313e5ab
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:19:52 2021 +0200
+
+    muutos toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 4f2a0e1234e8fe1c5b9582e4c4778ef8a7cbb9f1
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:18:24 2021 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1f224c14060f2b7c37bf3ad953d2e09350b7a6ca
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:14:25 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 1cc5294bde06bad731b39befb268c0a1d28119d8
+Author: Iida Vilkkinen <iida.vilkkinen@gmail.com>
+Date:   Sun Mar 21 14:11:21 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
