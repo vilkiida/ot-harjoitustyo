@@ -110,4 +110,4 @@ Date:   Sun Mar 21 14:11:21 2021 +0200
     tiedosto.txt luotu
 
  tiedosto.txt | 0
- 1 file changed, 0 insertions(+), 0 deletions(-) 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
