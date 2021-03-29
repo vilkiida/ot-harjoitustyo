@@ -30,4 +30,4 @@ class TestMaksukortti(unittest.TestCase):
         self.assertEqual(self.maksukortti.ota_rahaa(15), False)
     
     def test_str_funktio_toimii(self):
-        self.assertEqual(str(self.maksukortti) "saldo: 0.1")
+        self.assertEqual(str(self.maksukortti), "saldo: 0.1")
