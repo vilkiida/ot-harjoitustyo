@@ -10,7 +10,7 @@ Linkki 1:
 Linkki 2:
 [komentorivi.txt](https://github.com/vilkiida/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-#MIINAHARAVA
+# MIINAHARAVA
 
 ## Dokumentaatio
 
