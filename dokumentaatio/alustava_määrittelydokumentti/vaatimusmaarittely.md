@@ -55,5 +55,5 @@ kysytään pelaajalta sen haluama nimimerkki
 - pelaaja voi joko pelata pelin uudestaan tai palata ns. "pelivalikkoon"
 
 ## Jatkokehitysideoita
-- saattaa mennä jo perusversioonkin, mutta mukautettu vaikeustaso, jossa
-saa siis itse valita ruudukon koon ja miinojen määrän.
+- mukautettu vaikeustaso, jossa
+saa siis itse valita ruudukon koon ja miinojen määrä
