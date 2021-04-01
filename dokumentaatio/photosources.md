@@ -1,4 +1,4 @@
-# Sources for the photos in the mine sweeper game:
+# Sources for the photos in the minesweeper-game:
 
 ## 1:
 https://commons.wikimedia.org/wiki/File:Minesweeper_1.svg
