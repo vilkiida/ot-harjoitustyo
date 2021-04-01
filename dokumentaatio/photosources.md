@@ -1,33 +1,40 @@
-Sources for the photos in the mine sweeper game:
+# Sources for the photos in the mine sweeper game:
 
-1:
+## 1:
 https://commons.wikimedia.org/wiki/File:Minesweeper_1.svg
-2:
+
+## 2:
 https://commons.wikimedia.org/wiki/File:Minesweeper_2.svg
-3:
+
+## 3:
 https://commons.wikimedia.org/wiki/File:Minesweeper_3.svg
-4:
+
+## 4:
 https://commons.wikimedia.org/wiki/File:Minesweeper_4.svg
-5:
+
+## 5:
 https://commons.wikimedia.org/wiki/File:Minesweeper_5.svg
-6:
+
+## 6:
 https://commons.wikimedia.org/wiki/File:Minesweeper_6.svg
-7:
+
+## 7:
 https://commons.wikimedia.org/wiki/File:Minesweeper_7.svg
-8:
+
+## 8:
 https://commons.wikimedia.org/wiki/File:Minesweeper_8.svg
 
-mine:
+## mine:
 https://thenounproject.com/term/naval-mine/628505/
 
-flag:
+## flag:
 https://commons.wikimedia.org/wiki/File:Minesweeper_flag.svg?uselang=fi
 
-questionmark:
+## questionmark:
 https://commons.wikimedia.org/wiki/File:Minesweeper_questionmark.svg
 
-unopened:
+## unopened:
 https://commons.wikimedia.org/wiki/Category:Minesweeper#/media/File:Minesweeper_unopened_square.svg
 
-opened:
+## opened:
 https://commons.wikimedia.org/wiki/Category:Minesweeper#/media/File:Minesweeper_0.svg
