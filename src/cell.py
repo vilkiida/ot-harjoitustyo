@@ -1,7 +1,7 @@
 import pygame
 import os 
 
-dirname = os.path.dirname("~/ot-harjoitustyo/src/")
+dirname = os.path.dirname(__file__)
 
 class Cell(pygame.sprite.Sprite):
     def __init__(self, bomb:bool, opened:bool, flagged:bool, x=0, y=0):

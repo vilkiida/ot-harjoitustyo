@@ -6,11 +6,12 @@ class Level:
         self.cell_size = cell_size
         self.mines=pygame.sprite.Group()
         self.empties=pygame.sprite.Group()
-        #self.numebers=pygame.sprite.Group()
+        #self.numbers=pygame.sprite.Group()
 
         self.all_sprites=pygame.sprite.Group()
 
         self._initialize_sprites(level_map)
+        
     def _initialize_sprites(self, level_map):
         height = len(level_map)
         width = len(level_map[0])

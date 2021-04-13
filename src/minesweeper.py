@@ -10,24 +10,37 @@ LEVEL_MAP= [[0,0,0,0,1,0,0,0],
             [0,0,0,0,0,0,0,1],
             [0,1,0,0,0,0,0,0]]
 
-CELL_SIZE = 40
+CELL_SIZE = 50
+class Main:
+    def __init__(self):
+        self.height = len(LEVEL_MAP)
+        self.width = len(LEVEL_MAP[0])
+        self.display_height = self.height * CELL_SIZE
+        self.display_width = self.width * CELL_SIZE
 
-def main():
-    height = len(LEVEL_MAP)
-    width = len(LEVEL_MAP[0])
-    display_height = height * CELL_SIZE
-    display_width = width * CELL_SIZE
+        self.display = pygame.display.set_mode((self.display_width, self.display_height))
 
+        pygame.display.set_caption("Minesweeper!")
 
-    display = pygame.display.set_mode((display_width, display_height))
+        self.level = Level(LEVEL_MAP, CELL_SIZE)
 
-    pygame.display.set_caption("Minesweeper!")
+        pygame.init()
 
-    level = Level(LEVEL_MAP, CELL_SIZE)
+        self.loop()
 
-    pygame.init()
+    def check_events(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                exit()
+    def draw(self):
 
-    level.all_sprites.draw(display)
+        self.level.all_sprites.draw(self.display)
+        pygame.display.flip()
+
+    def loop(self):
+        while True:
+            self.check_events()
+            self.draw()
 
 if __name__ == "__main__":
-    main()
+    Main()
