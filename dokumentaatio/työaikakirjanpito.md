@@ -5,4 +5,4 @@ Päivä | Aika | Mitä tein?
 1.4 | 1,5h | Projenktin alustus, invoke tehty ja pygamen ohjeisiin tutustuttu. 
 2.4 | 2h | Kuvien lisäys, sprite olioiden tekeminen, level.py tekeminen
 13.4|3h | tehty cell.py, muokattu level.py ja minesweeper.py, pyritty piirtämään pelilauta (ei vielä toimi) 
-13.4|n.2,5h|yritin korjata ongelmaa, jossa pygame ikkuna vaan vilahtaa auki. Loppu tuloksena sovellus piirtää nyt avaamattoman miinaharavaruudukon, muttei sen enempää.
+13.4|n.2,5h|yritin korjata ongelmaa, jossa pygame ikkuna vaan vilahtaa auki. Lopputuloksena sovellus piirtää nyt avaamattoman miinaharavaruudukon, muttei sen enempää. Alan epäillä oliko sprite olio sittenkään paras ratkaisu?
