@@ -1,9 +1,9 @@
 import pygame
 import os 
 
-dirname = os.path.dirname("~/ot-harjoitustyo/src")
+dirname = os.path.dirname("~/ot-harjoitustyo/src/")
 
-class Cell():
+class Cell(pygame.sprite.Sprite):
     def __init__(self, bomb:bool, opened:bool, flagged:bool, x=0, y=0):
         super().__init__()
         self.bomb=bomb
