@@ -17,13 +17,16 @@ class Cell:
     def turn_into_a_mine(self):
         self.mine = True
     
-    def make_a_flag(self):
-        self.flagged = True
-    
-    def make_a_guestionmark(self):
-        self.questionmark = True
-    
     def open(self):
-        self.opened = True
-    
+        if self.opened == True:
+            pass
 
+        else:
+            if self.mine == False:
+                self.image = pygame.image.load(os.path.join(dirname, "assets", "ms-opened.png"))
+                self.rect=self.image.get_rect()
+
+            else:
+                self.image = pygame.image.load(os.path.join(dirname, "assets", "ms-mine.png"))
+                self.rect=self.image.get_rect()
+    
