@@ -13,3 +13,5 @@ Päivä | Aika | Mitä tein?
 19.4 | 3h | Pelin hahmotelman editäminen
 20.4 | 3,5 | Pelin hahmotelman kehittäminen ja sen pohjalta pelin koodi edistetty siihen vaiheeseen, että itse pelin toiminallisuudet toimivat 
 20.4 | 2h | mm. lisätty testejä ja coverge-report ja pylint taskeihin
+20.4 | 3h-3,5h | Mm. parannettu koodin laatua, tehty lisää testejä ja tehty arkkitehtuuri kuvaus repositorion dokumentaatioon.
+YHT| 28,5-30,5 
