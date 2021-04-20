@@ -9,7 +9,7 @@ ruudun jossa on miina.
 
 ## Suunnitellut toiminnallisuudet
 
-### Yleisesti:
+### Lyhyesti:
 - Peliä on tarkoitus pystyä pelaamaan eri vaikeustasoilla, joita olisi
 ainakin seuraavat:
   - Helppo
@@ -24,7 +24,7 @@ suoritusaika
 suoritusaika on tarpeeksi hyvä päästäkseen Top 5 listalle.
 - Pelaaja voi tarkastella high score taulukkoja eri vaikeustasoille
 
-### Vähän tarkemmin (+ checklist):
+### Vähän tarkemmin (checklist toiminnallisuuksista):
 
 #### Toiminnallisuudet ennen varsinaisen pelin alkua (pelivalikko):
 - [ ] pelaaja voi valita haluamansa vaikeustason ja käynnistää varsinaisen pelin
