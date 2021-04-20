@@ -41,3 +41,4 @@ class TestMinesweeper(unittest.TestCase):
     def test_game_mine_amount_right_when_expert(self):
         self.minesweeper = Main(expert)
         self.assertEqual(99, self.minesweeper.mine_amount)
+    
