@@ -12,3 +12,4 @@ Päivä | Aika | Mitä tein?
 19.4 | 2h | hahmoteltu koodia ja lisätty toiminnallisuus: vasen hiiren painike avaa ruudun 
 19.4 | 3h | Pelin hahmotelman editäminen
 20.4 | 3,5 | Pelin hahmotelman kehittäminen ja sen pohjalta pelin koodi edistetty siihen vaiheeseen, että itse pelin toiminallisuudet toimivat 
+20.4 | 2h | mm. lisätty testejä ja coverge-report ja pylint taskeihin
