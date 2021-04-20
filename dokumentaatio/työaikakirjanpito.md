@@ -10,3 +10,5 @@ Päivä | Aika | Mitä tein?
 14.4 | 2h | Kehittelin hahmoitelmaa repositorion ulkopuolelle siitä, miten totettaisinkin pelin ilman sprite luokkaa ja sprite olioita onnistuneesti. Seuraavaksi pyrin muuttamaan nykyisen koodin tämän hahmotelman pohjalta (jos siis tulen siihen tulokseen että se olisi fiksumpi niin) ja sitten teen viikon 3 tavoite listan asiat loppuun!
 18.4 | n.1,5-2h |Pelin koodi kirjoitettu uudelleen hahmotelman pohjalta ilman sprite luokkia
 19.4 | 2h | hahmoteltu koodia ja lisätty toiminnallisuus: vasen hiiren painike avaa ruudun 
+19.4 | 3h | Pelin hahmotelman editäminen
+20.4 | 3,5 | Pelin hahmotelman kehittäminen ja sen pohjalta pelin koodi edistetty siihen vaiheeseen, että itse pelin toiminallisuudet toimivat 
