@@ -26,7 +26,7 @@ suoritusaika on tarpeeksi hyvä päästäkseen Top 5 listalle.
 
 ### Vähän tarkemmin (+ checklist):
 
-#### Toiminnallisuudet en-[nen varsinaisen pelin alkua (pelivalikko):
+#### Toiminnallisuudet ennen varsinaisen pelin alkua (pelivalikko):
 - [ ] pelaaja voi valita haluamansa vaikeustason ja käynnistää varsinaisen pelin
 - [ ] pelaaja voi tarkastella highscore -listaa eri vaikeustasoilla
 - [ ] pelaaja voi lukea pelin ohjeen
