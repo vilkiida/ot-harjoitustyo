@@ -26,34 +26,34 @@ suoritusaika on tarpeeksi hyvä päästäkseen Top 5 listalle.
 
 ### Vähän tarkemmin:
 
-#### Toimnnallisuudet ennen varsinaisen pelin alkua (pelivalikko):
-- pelaaja voi valita haluamansa vaikeustason ja käynnistää varsinaisen pelin
-- pelaaja voi tarkastella highscore -listaa eri vaikeustasoilla
-- pelaaja voi lukea pelin ohjeen
+#### Toiminnallisuudet ennen varsinaisen pelin alkua (pelivalikko):
+-[] pelaaja voi valita haluamansa vaikeustason ja käynnistää varsinaisen pelin
+-[] pelaaja voi tarkastella highscore -listaa eri vaikeustasoilla
+-[] pelaaja voi lukea pelin ohjeen
 
 #### Toiminnallisuudet varsinaisen pelin aikana:
-- suorituksen kestosta mitataan aikaa
-- pelaaja voi klikata haluamaansa ruutua hiiren vasemalla näppäimellä
+-[] suorituksen kestosta mitataan aikaa
+-[] pelaaja voi klikata haluamaansa ruutua hiiren vasemalla näppäimellä
 avatakseensa kyseisen ruudun
-  - jos kyseisessä ruudussa oli miina peli päättyy
-  - jos kyseinen ruutu oli tyhjä aukeaa sen ympäriltä myös muut tyhjät
+  -[] jos kyseisessä ruudussa oli miina peli päättyy
+  -[] jos kyseinen ruutu oli tyhjä aukeaa sen ympäriltä myös muut tyhjät
 ruudut ja osaan näistä ruuduista, ilmestyy numerot, jotka kertovat montako
 miinaa kyseisen ruudun ympärillä on. 
-- pelaaja voi klikata hiiren oikealla näppäillä ruutua, jonka se haluaa merkitä
+-[] pelaaja voi klikata hiiren oikealla näppäillä ruutua, jonka se haluaa merkitä
 lipulla
-- jos pelaaja klikkaa oikealla näppäimellä ruutua, joka on jo merkitty lipulla
+-[] jos pelaaja klikkaa oikealla näppäimellä ruutua, joka on jo merkitty lipulla
 merkintä muuttuu kysymysmerkiksi, joka on merkitä mitä pelaaja voi itse käyttää
 hyödyksi epäillessään kyseisessä ruudussa olevan miina.
-- jos pelaaja klikkaa oikealla näppäimella ruutua, joka on merkitty
+-[] jos pelaaja klikkaa oikealla näppäimella ruutua, joka on merkitty
 kysymysmerkillä, merkitä häviää.
 
 #### Toiminnallisuudet pelisuorituksen jälkeen:
-- pelaaja näkee suoritusaikansa
-- pelaajalle näytetään, kyseisen vaikeustason highscore -lista
-- jos pelaaja oma tulos on tarpeeksi hyvä päästäkseen highscore -listalle,
+-[] pelaaja näkee suoritusaikansa
+-[] pelaajalle näytetään, kyseisen vaikeustason highscore -lista
+-[] jos pelaaja oma tulos on tarpeeksi hyvä päästäkseen highscore -listalle,
 kysytään pelaajalta sen haluama nimimerkki
-- pelaaja voi joko pelata pelin uudestaan tai palata ns. "pelivalikkoon"
+-[] pelaaja voi joko pelata pelin uudestaan tai palata ns. "pelivalikkoon"
 
 ## Jatkokehitysideoita
-- mukautettu vaikeustaso, jossa
+-[] mukautettu vaikeustaso, jossa
 saa siis itse valita ruudukon koon ja miinojen määrä
