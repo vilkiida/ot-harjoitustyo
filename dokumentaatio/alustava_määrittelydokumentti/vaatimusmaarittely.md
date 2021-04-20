@@ -33,19 +33,19 @@ suoritusaika on tarpeeksi hyvä päästäkseen Top 5 listalle.
 
 #### Toiminnallisuudet varsinaisen pelin aikana:
 - [ ] suorituksen kestosta mitataan aikaa
-- [ ] pelaaja voi klikata haluamaansa ruutua hiiren vasemalla näppäimellä
+- [x] pelaaja voi klikata haluamaansa ruutua hiiren vasemalla näppäimellä
 avatakseensa kyseisen ruudun
-  - [ ] jos kyseisessä ruudussa oli miina peli päättyy
-  - [ ] jos kyseinen ruutu oli tyhjä aukeaa sen ympäriltä myös muut tyhjät
+  - [x] jos kyseisessä ruudussa oli miina peli päättyy
+  - [x] jos kyseinen ruutu oli tyhjä aukeaa sen ympäriltä myös muut tyhjät
 ruudut ja osaan näistä ruuduista, ilmestyy numerot, jotka kertovat montako
 miinaa kyseisen ruudun ympärillä on. 
-- [ ] pelaaja voi klikata hiiren oikealla näppäillä ruutua, jonka se haluaa merkitä
+- [x] pelaaja voi klikata hiiren oikealla näppäillä ruutua, jonka se haluaa merkitä
 lipulla
-- [ ] jos pelaaja klikkaa oikealla näppäimellä ruutua, joka on jo merkitty lipulla
+- [x] jos pelaaja klikkaa oikealla näppäimellä ruutua, joka on jo merkitty lipulla
 merkintä muuttuu kysymysmerkiksi, joka on merkitä mitä pelaaja voi itse käyttää
 hyödyksi epäillessään kyseisessä ruudussa olevan miina.
-- [ ] jos pelaaja klikkaa oikealla näppäimella ruutua, joka on merkitty
-kysymysmerkillä, merkitä häviää.
+- [x] jos pelaaja klikkaa oikealla näppäimella ruutua, joka on merkitty
+kysymysmerkillä, merkintä häviää.
 
 #### Toiminnallisuudet pelisuorituksen jälkeen:
 - [ ] pelaaja näkee suoritusaikansa
