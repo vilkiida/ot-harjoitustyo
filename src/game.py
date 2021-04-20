@@ -20,7 +20,7 @@ class Game:
     def game_over(self, y, x):
         self.field.open_all()
         self.field.blow_up_a_mine(y,x)
-        
+
     def game_won(self):
         self.field.open_all()
     
@@ -78,8 +78,4 @@ class Game:
             self.check_events()
             self.draw_screen()
 
-
-if __name__ ==  "__main__":
-    board=Field(10,8,12)
-    Game(board,50)
 
