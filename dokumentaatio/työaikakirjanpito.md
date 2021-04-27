@@ -15,4 +15,5 @@ Päivä | Aika | Mitä tein?
 20.4 | 2h | mm. lisätty testejä ja coverge-report ja pylint taskeihin
 20.4 | 3h-3,5h | Mm. parannettu koodin laatua, tehty lisää testejä ja tehty arkkitehtuuri kuvaus repositorion dokumentaatioon.
 26.4 | 3h | Päävalikon ja pelivalikon teko aloitettu. Päävalikon pelivalikko osa toimii, mutta highscore ja help kohdat vielä tekemättä.
-YHT| 31,5-33,5 
+27.4 | 4,5h | Päävalikkoa edistettu, toimii nyt highscore osiota lukuunottamatta.
+YHT| 36-38 
