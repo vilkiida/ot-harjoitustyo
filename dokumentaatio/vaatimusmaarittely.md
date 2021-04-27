@@ -56,7 +56,7 @@ kysytään pelaajalta sen haluama nimimerkki
 - [ ] pelaaja voi joko pelata pelin uudestaan tai palata ns. "pelivalikkoon"
 
 #### Lisää:
-- [ ] sovelluksen pelivalikon koodin jäsentelyn parantaminen
+- [ ] sovelluksen pelivalikon koodin jäsentelyn parantaminen (vähemmän toisteista koodia pelivalikoissa)
 
 ## Jatkokehitysideoita
 - [ ] mukautettu vaikeustaso, jossa
