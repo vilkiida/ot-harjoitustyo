@@ -27,9 +27,10 @@ suoritusaika on tarpeeksi hyvä päästäkseen Top 5 listalle.
 ### Vähän tarkemmin (checklist toiminnallisuuksista):
 
 #### Toiminnallisuudet ennen varsinaisen pelin alkua (pelivalikko):
-- [ ] pelaaja voi valita haluamansa vaikeustason ja käynnistää varsinaisen pelin
+- [x] sovelluksessa on pelivalikko
+- [x] pelaaja voi valita haluamansa vaikeustason ja käynnistää varsinaisen pelin
 - [ ] pelaaja voi tarkastella highscore -listaa eri vaikeustasoilla
-- [ ] pelaaja voi lukea pelin ohjeen
+- [x] pelaaja voi lukea pelin ohjeen
 
 #### Toiminnallisuudet varsinaisen pelin aikana:
 - [ ] suorituksen kestosta mitataan aikaa
@@ -53,6 +54,9 @@ kysymysmerkillä, merkintä häviää.
 - [ ] jos pelaaja oma tulos on tarpeeksi hyvä päästäkseen highscore -listalle,
 kysytään pelaajalta sen haluama nimimerkki
 - [ ] pelaaja voi joko pelata pelin uudestaan tai palata ns. "pelivalikkoon"
+
+#### Lisää:
+- [ ] sovelluksen pelivalikon koodin jäsentelyn parantaminen
 
 ## Jatkokehitysideoita
 - [ ] mukautettu vaikeustaso, jossa
