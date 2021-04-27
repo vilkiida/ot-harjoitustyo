@@ -5,5 +5,5 @@ toistaiseksi miinaharava pelin sovelluslogiikasta vastaavat luokat [Game](https:
 
 ### Luokkakaavio:
 
-![Luokkakaavio](./kuvat/luokkakaavio.png)
+![Luokkakaavio2](./kuvat/luokkakaavio.png)
 
