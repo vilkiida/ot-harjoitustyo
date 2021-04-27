@@ -1,5 +1,7 @@
 import pygame
 from gamemenu import GameMenu
+from highscores_menu import HighscoresMenu
+from instructions import Instruction
 class MainMenu:
     def __init__(self):
         self.screen_height = 600
@@ -11,6 +13,7 @@ class MainMenu:
         self.button_color = (140, 140, 150)
         self.background_color = (50, 50, 50)
         pygame.init()
+        pygame.display.set_caption("MINESWEEPER")
         self.font = pygame.font.SysFont("Arial", 50)
         self.loop()
     def draw_button(self, button):
@@ -20,11 +23,16 @@ class MainMenu:
         self.screen.blit(button_text, (x, y))
     def click(self, position):
         if self.gamemenu_button.collidepoint(position):
-            GameMenu()
+            game_menu=GameMenu()
+            game_menu.run_menu()
         if self.highscores_button.collidepoint(position):
-            print("highscores")
+            highscore_menu=HighscoresMenu()
+            highscore_menu.run_menu()
+            self.reset_caption()
         if self.instructions_button.collidepoint(position):
-            print("help")
+            instruc = Instruction()
+            instruc.run_instructions()
+            self.reset_caption()
     def check_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -46,4 +54,6 @@ class MainMenu:
         while True:
             self.check_events()
             self.draw_screen()
+    def reset_caption(self):
+        pygame.display.set_caption("MINESWEEPER")
 MainMenu()

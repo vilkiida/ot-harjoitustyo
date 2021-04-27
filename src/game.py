@@ -1,6 +1,10 @@
 import pygame
 class Game:
-    def __init__(self, field, cell_size):
+    def __init__(self, field, cell_size, title):
+        self.title=title
+        self.running = False
+        self.game_lost = False
+        self.game_won = False
         self.field = field
         self.cell_size = cell_size
         self.field_width = field.width
@@ -8,13 +12,21 @@ class Game:
         self.screen_width = self.cell_size*self.field_width
         self.screen_height = self.cell_size*self.field_height
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
-        pygame.init()
-        self.loop()
-    def game_over(self, y, x):
+    def run_game(self):
+        while True:
+            pygame.init()
+            pygame.display.set_caption(f"MINESWEEPER - {self.title}")
+            self.running = True
+            self.loop()
+            break
+        return
+    def game_over_lost(self, y, x):
         self.field.open_all()
         self.field.blow_up_a_mine(y, x)
-    def game_won(self):
+        self.game_lost = True
+    def game_over_won(self):
         self.field.open_all()
+        self.game_won = True
     def check_for_win(self):
         victory = True
         for y in range(0, self.field_height):
@@ -27,12 +39,12 @@ class Game:
         x = position[0] // self.cell_size
         y = position[1] // self.cell_size
         if self.field.field[y][x].is_a_mine():
-            self.game_over(y, x)
+            self.game_over_lost(y, x)
         else:
             if not self.check_for_win():
                 self.field.open_cell(y, x)
             else:
-                self.game_won()
+                self.game_over_won()
     def right_click(self, position):
         x = position[0] // self.cell_size
         y = position[1] // self.cell_size
@@ -43,8 +55,13 @@ class Game:
                 exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
-                    position=pygame.mouse.get_pos()
-                    self.left_click(position)
+                    if self.game_lost == True:
+                        self.running = False
+                    if self.game_won == True:
+                        self.running = False
+                    else:
+                        position=pygame.mouse.get_pos()
+                        self.left_click(position)
                 if event.button == 3:
                     position=pygame.mouse.get_pos()
                     self.right_click(position)
@@ -56,6 +73,6 @@ class Game:
                 self.screen.blit(cell.image, (x*self.cell_size, y*self.cell_size))
         pygame.display.flip()
     def loop(self):
-        while True:
+        while self.running == True:
             self.check_events()
             self.draw_screen()
