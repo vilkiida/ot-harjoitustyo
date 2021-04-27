@@ -17,4 +17,5 @@ Päivä | Aika | Mitä tein?
 26.4 | 3h | Päävalikon ja pelivalikon teko aloitettu. Päävalikon pelivalikko osa toimii, mutta highscore ja help kohdat vielä tekemättä.
 27.4 | 4,5h | Päävalikkoa edistettu, toimii nyt highscore osiota lukuunottamatta.
 27.4 | 2h | Lisäsin testejä ja korjasin uusien testieni avulla huomaamiani bugeja. 
+27.4 | 2h | Siistin sovelluksen koodia niin, että pylin arvosana nousi yli 8 (eli kaikki muut huomautetut virheet pois paitsi docstring virheet). Täydensin arkkitehtuuri sivua dokumentaatioon
 YHT| 38-40 
