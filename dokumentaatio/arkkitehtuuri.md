@@ -13,5 +13,5 @@ Kuvauksia muutamista sovelluksen pää toiminnallisuuksista:
 #### Miinaharava pelin aloittaminen:
 Seuraava sekvenssikaavio kuvastaa pelivalikon toimintaa ja sitä miten pelin käynnistyttyä käyttäjä saa aloitettua helppo-vaikeustasoisen miinaharava-pelin. UI seuravaassa kaaviossa tarkoittaa tässä tapauksessa pelin graafista käyttöliittyymää, joka syntyy pygamen avulla.
 
-![Sekvenssikaavio1](.kuvat/sekvenssikaavio1.png)
+![Sekvenssikaavio1](./kuvat/sekvenssikaavio1.png)
 
