@@ -9,6 +9,8 @@ class Instruction:
         self.back_button = pygame.Rect(75, 500, 350, 50)
         self.button_color = (140, 140, 150)
         self.background_color = (50, 50, 50)
+        self.font = None
+        self.font_smaller = None
     def run_instructions(self):
         pygame.init()
         pygame.display.set_caption("MINESWEEPER - help")
@@ -35,33 +37,43 @@ class Instruction:
         self.draw_instructions()
         pygame.display.flip()
     def loop(self):
-        while self.running == True:
+        while self.running:
             self.check_events()
             self.draw_screen()
     def draw_button(self, button):
         pygame.draw.rect(self.screen, self.button_color, button)
-    def draw_button_text(self, text, font, x, y):
+    def draw_button_text(self, text, font, x_value, y_value):
         button_text = font.render(text, True, (0, 0, 0))
-        self.screen.blit(button_text, (x, y))
-    def draw_title(self, x, y):
+        self.screen.blit(button_text, (x_value, y_value))
+    def draw_title(self, x_value, y_value):
         title = self.font.render("HOW TO PLAY :", True, (220, 220, 220))
-        self.screen.blit(title, (x, y))
+        self.screen.blit(title, (x_value, y_value))
     def draw_instructions(self):
-        line1 = self.font_smaller.render("The goal is to clear the field without opening", True, (220, 220, 220))
+        line1_text = "The goal is to clear the field without opening"
+        line2_text = "a cell that has a mine in it. Open a cell by"
+        line3_text = "using the left click. Mark a cell with a flag"
+        line4_text = "by using the righ click. Another right click"
+        line5_text = "marks a questionmark. If a cell is empty it"
+        line6_text = "doesn't have mines around it. If a cell has a"
+        line7_text = "number, it means that there are that many"
+        line8_text = "mines around the cell. Lose the game by"
+        line9_text = "opening a cell that contains a mine."
+        line1 = self.font_smaller.render(line1_text, True, (220, 220, 220))
         self.screen.blit(line1, (63, 150))
-        line2 = self.font_smaller.render("a cell that has a mine in it. Open a cell by", True, (220, 220, 220))
+        line2 = self.font_smaller.render(line2_text, True, (220, 220, 220))
         self.screen.blit(line2, (63, 180))
-        line3 = self.font_smaller.render("using the left click. Mark a cell with a flag", True, (220, 220, 220))
+        line3 = self.font_smaller.render(line3_text, True, (220, 220, 220))
         self.screen.blit(line3, (63, 210))
-        line4 = self.font_smaller.render("by using the righ click. Another right click", True, (220, 220, 220))
+        line4 = self.font_smaller.render(line4_text, True, (220, 220, 220))
         self.screen.blit(line4, (63, 240))
-        line5 = self.font_smaller.render("marks a questionmark. If a cell is empty it", True, (220, 220, 220))
+        line5 = self.font_smaller.render(line5_text, True, (220, 220, 220))
         self.screen.blit(line5, (63, 270))
-        line6 = self.font_smaller.render("doesn't have mines around it. If a cell has a", True, (220, 220, 220))
+        line6 = self.font_smaller.render(line6_text, True, (220, 220, 220))
         self.screen.blit(line6, (63, 300))
-        line7 = self.font_smaller.render("number, it means that there are that many", True, (220, 220, 220))
+        line7 = self.font_smaller.render(line7_text, True, (220, 220, 220))
         self.screen.blit(line7, (63, 330))
-        line8 = self.font_smaller.render("mines around the cell. Lose the game by", True, (220, 220, 220))
+        line8 = self.font_smaller.render(line8_text, True, (220, 220, 220))
         self.screen.blit(line8, (63, 360))
-        line9 = self.font_smaller.render("opening a cell that contains a mine.", True, (220, 220, 220))
+        line9 = self.font_smaller.render(line9_text, True, (220, 220, 220))
         self.screen.blit(line9, (63, 390))
+        

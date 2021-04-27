@@ -18,15 +18,15 @@ class MainMenu:
         self.loop()
     def draw_button(self, button):
         pygame.draw.rect(self.screen, self.button_color, button)
-    def draw_text(self, text, x, y):
+    def draw_text(self, text, x_value, y_value):
         button_text = self.font.render(text, True, (0, 0, 0))
-        self.screen.blit(button_text, (x, y))
+        self.screen.blit(button_text, (x_value, y_value))
     def click(self, position):
         if self.gamemenu_button.collidepoint(position):
-            game_menu=GameMenu()
+            game_menu = GameMenu()
             game_menu.run_menu()
         if self.highscores_button.collidepoint(position):
-            highscore_menu=HighscoresMenu()
+            highscore_menu = HighscoresMenu()
             highscore_menu.run_menu()
             self.reset_caption()
         if self.instructions_button.collidepoint(position):

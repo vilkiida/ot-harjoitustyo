@@ -12,6 +12,8 @@ class HighscoresMenu:
         self.back_button = pygame.Rect(75, 500, 350, 50)
         self.button_color = (140, 140, 150)
         self.background_color = (50, 50, 50)
+        self.font = None
+        self.font_small = None
     def run_menu(self):
         pygame.init()
         pygame.display.set_caption("MINESWEEPER - highscores")
@@ -30,12 +32,12 @@ class HighscoresMenu:
             self.running = False
     def draw_button(self, button):
         pygame.draw.rect(self.screen, self.button_color, button)
-    def draw_text(self, text, font, x, y):
+    def draw_text(self, text, font, x_value, y_value):
         button_text = font.render(text, True, (0, 0, 0))
-        self.screen.blit(button_text, (x, y))
-    def draw_instruction(self, text, x, y):
-        instruction = self.font_small.render(text, True, (220,220,220))
-        self.screen.blit(instruction, (x, y))
+        self.screen.blit(button_text, (x_value, y_value))
+    def draw_instruction(self, text, x_value, y_value):
+        instruction = self.font_small.render(text, True, (220, 220, 220))
+        self.screen.blit(instruction, (x_value, y_value))
     def check_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -49,7 +51,9 @@ class HighscoresMenu:
         self.draw_button(self.easy_button)
         self.draw_text("EASY", self.font, self.easy_button.left+138, self.easy_button.top+11)
         self.draw_button(self.mediumhard_button)
-        self.draw_text("MEDIUMHARD", self.font,  self.mediumhard_button.left+28, self.mediumhard_button.top+11)
+        x_value = self.mediumhard_button.left+28
+        y_value = self.mediumhard_button.top+11
+        self.draw_text("MEDIUMHARD", self.font, x_value, y_value)
         self.draw_button(self.expert_button)
         self.draw_text("EXPERT", self.font, self.expert_button.left+108, self.expert_button.top+11)
         self.draw_button(self.back_button)
@@ -57,6 +61,7 @@ class HighscoresMenu:
         self.draw_instruction("CHOOSE DIFFICULTY :", 100, 50)
         pygame.display.flip()
     def loop(self):
-        while self.running == True:
+        while self.running:
             self.check_events()
             self.draw_screen()
+            
