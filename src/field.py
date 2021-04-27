@@ -45,12 +45,13 @@ class Field:
         self.field[y][x].mark_neigbour_mines(neighbour_mines_amount)
     def open_cell(self, y, x):
         if not self.field[y][x].is_opened():
-            if not self.field[y][x].is_flagged() and not self.field[y][x].is_questionmark():
-                if self.field[y][x].neighbour_mines == 0:
-                    self.field[y][x].open()
-                    self.open_empty_neighbours(y, x)
-                else:
-                    self.field[y][x].open()
+            if not self.field[y][x].is_flagged():
+                if not self.field[y][x].is_questionmark():
+                    if self.field[y][x].neighbour_mines == 0:
+                        self.field[y][x].open()
+                        self.open_empty_neighbours(y, x)
+                    else:
+                        self.field[y][x].open()
     def open_empty_neighbours(self, y, x):
         for neighbour in self.field[y][x].neighbours:
             if not self.field[neighbour[0]][neighbour[1]].is_opened():

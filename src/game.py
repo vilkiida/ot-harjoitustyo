@@ -39,7 +39,9 @@ class Game:
         x = position[0] // self.cell_size
         y = position[1] // self.cell_size
         if self.field.field[y][x].is_a_mine():
-            self.game_over_lost(y, x)
+            if not self.field.field[y][x].is_flagged():
+                if not self.field.field[y][x].is_questionmark():
+                    self.game_over_lost(y, x)
         else:
             if not self.check_for_win():
                 self.field.open_cell(y, x)
