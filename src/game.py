@@ -1,4 +1,5 @@
 import pygame
+import time
 class Game:
     def __init__(self, field, cell_size, title):
         self.title = title
@@ -12,14 +13,24 @@ class Game:
         self.screen_width = self.cell_size*self.field_width
         self.screen_height = self.cell_size*self.field_height
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+        self.start_time = None
+        self.end_time = None
     def run_game(self):
         while True:
             pygame.init()
             pygame.display.set_caption(f"MINESWEEPER - {self.title}")
             self.running = True
             self.loop()
+            self.handle_time()
             break
         return
+    def handle_time(self):
+        difference = self.end_time - self.start_time
+        hours = difference // 3600
+        difference = difference - hours*3600
+        minutes = difference // 60
+        seconds = difference - minutes*60
+        print('%d:%d:%d' %(hours, minutes, seconds))
     def game_over_lost(self, y_value, x_value):
         self.field.open_all()
         self.field.blow_up_a_mine(y_value, x_value)
@@ -38,15 +49,25 @@ class Game:
     def left_click(self, position):
         x_value = position[0] // self.cell_size
         y_value = position[1] // self.cell_size
+        if self.is_first_move():
+            self.start_time = time.time()
         if self.field.field[y_value][x_value].is_a_mine():
             if not self.field.field[y_value][x_value].is_flagged():
                 if not self.field.field[y_value][x_value].is_questionmark():
+                    self.end_time = time.time()
                     self.game_over_lost(y_value, x_value)
         else:
-            if not self.check_for_win():
-                self.field.open_cell(y_value, x_value)
-            else:
+            self.field.open_cell(y_value, x_value)
+            if self.check_for_win():
+                self.end_time = time.time()
                 self.game_over_won()
+    def is_first_move(self):
+        all_closed = True
+        for y_value in range(self.field_height):
+            for x_value in range(self.field.width):
+                if self.field.field[y_value][x_value].is_opened():
+                    all_closed = False
+        return all_closed
     def right_click(self, position):
         x_value = position[0] // self.cell_size
         y_value = position[1] // self.cell_size
