@@ -18,4 +18,5 @@ Päivä | Aika | Mitä tein?
 27.4 | 4,5h | Päävalikkoa edistettu, toimii nyt highscore osiota lukuunottamatta.
 27.4 | 2h | Lisäsin testejä ja korjasin uusien testieni avulla huomaamiani bugeja. 
 27.4 | 2h | Siistin sovelluksen koodia niin, että pylin arvosana nousi yli 8 (eli kaikki muut huomautetut virheet pois paitsi docstring virheet). Täydensin arkkitehtuuri sivua dokumentaatioon.
-YHT| 40-42 
+3.5 | 2h | Highscores osio aloitettu. Kesken...
+YHT| 42-44 
