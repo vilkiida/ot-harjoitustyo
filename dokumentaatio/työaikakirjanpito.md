@@ -19,4 +19,5 @@ Päivä | Aika | Mitä tein?
 27.4 | 2h | Lisäsin testejä ja korjasin uusien testieni avulla huomaamiani bugeja. 
 27.4 | 2h | Siistin sovelluksen koodia niin, että pylin arvosana nousi yli 8 (eli kaikki muut huomautetut virheet pois paitsi docstring virheet). Täydensin arkkitehtuuri sivua dokumentaatioon.
 3.5 | 2h | Highscores osio aloitettu. Kesken...
-YHT| 42-44 
+4.5 | 2h | Lisätty ei näkyvissä oleva ajan otto pelistä ja pelin loppuun tekstit "game won" ja "game lost" sekä ajan näyttäminen. 
+YHT| 44-46 
