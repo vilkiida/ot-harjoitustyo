@@ -22,6 +22,8 @@ Miinaharava-pelisovellus. Pelin ideana on siis avata tyhjiä ruutuja ja merkata 
 
 [Viikon 5 release](https://github.com/vilkiida/ot-harjoitustyo/releases/tag/viikko5)
 
+[Viikon 6 release](https://github.com/vilkiida/ot-harjoitustyo/releases/tag/viikko6)
+
 ## Miinaharava sovelluksen käyttöohjeet:
 
 1. Ensin asenna riippuvuudet "poetry install" komennolla
