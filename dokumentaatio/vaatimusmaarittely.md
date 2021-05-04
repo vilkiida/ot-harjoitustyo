@@ -33,7 +33,7 @@ suoritusaika on tarpeeksi hyvä päästäkseen Top 5 listalle.
 - [x] pelaaja voi lukea pelin ohjeen
 
 #### Toiminnallisuudet varsinaisen pelin aikana:
-- [ ] suorituksen kestosta mitataan aikaa
+- [x] suorituksen kestosta mitataan aikaa
 - [x] pelaaja voi klikata haluamaansa ruutua hiiren vasemalla näppäimellä
 avatakseensa kyseisen ruudun
   - [x] jos kyseisessä ruudussa oli miina peli päättyy
@@ -49,11 +49,11 @@ hyödyksi epäillessään kyseisessä ruudussa olevan miina.
 kysymysmerkillä, merkintä häviää.
 
 #### Toiminnallisuudet pelisuorituksen jälkeen:
-- [ ] pelaaja näkee suoritusaikansa
-- [ ] pelaajalle näytetään, kyseisen vaikeustason highscore -lista
+- [x] pelaaja näkee ilmoituksen voittiko vai hävisikö pelin
+- [x] pelaaja näkee suoritusaikansa
 - [ ] jos pelaaja oma tulos on tarpeeksi hyvä päästäkseen highscore -listalle,
 kysytään pelaajalta sen haluama nimimerkki
-- [ ] pelaaja voi joko pelata pelin uudestaan tai palata ns. "pelivalikkoon"
+- [x] pelaaja voi pelin jälkeen palata ns. "pelivalikkoon" klikkaamalla ruutua.
 
 #### Lisää:
 - [ ] sovelluksen pelivalikon koodin jäsentelyn parantaminen (vähemmän toisteista koodia pelivalikoissa)
