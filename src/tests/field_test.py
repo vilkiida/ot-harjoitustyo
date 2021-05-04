@@ -58,4 +58,15 @@ class TestField(unittest.TestCase):
                 if self.field.field[0][0].opened == False:
                     all_open=False
         self.assertEqual(True, all_open)
+    def test_open_empty_neighbours_opens_correct_amount(self):
+        number_of_epties = len(self.field.field[0][0].neighbours) - self.field.field[0][0].neighbour_mines
+        self.field.open_empty_neighbours(0,0)
+        opened = 0
+        for naapuri in self.field.field[0][0].neighbours:
+            y = naapuri[0]
+            x = naapuri[1]
+            if self.field.field[y][x].opened == True:
+                opened +=1
+        self.assertEqual(number_of_epties, opened)
+    
     

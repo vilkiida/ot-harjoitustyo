@@ -61,7 +61,7 @@ class Game:
         """ Laskee start_timen ja end_timen avulla peliin kuluneen ajan ja
             palauttaa sen oikeassa muodossa.
         """
-        if self.end_time != None:
+        if self.end_time is not None and self.start_time is not None:
             difference = self.end_time - self.start_time
             hours = difference // 3600
             difference = difference - hours*3600

@@ -108,4 +108,35 @@ class TestGame(unittest.TestCase):
         if self.game.field.field[0][0].questionmark == True:
             no_markings = False
         self.assertEqual(True, no_markings)
+    def test_is_first_move_returns_True_correctly(self):
+        self.assertEqual(True, self.game.is_first_move())
+    def test_is_first_move_return_False_correclty(self):
+        for y in range(self.game.field_height):
+            for x in range(self.game.field_width):
+                if self.game.field.field[y][x].mine == False:
+                    self.game.field.field[y][x].opened = True
+        self.assertEqual(False, self.game.is_first_move())
+    def test_handle_time_works_correctly(self):
+        self.game.start_time = 10200
+        self.game.end_time = 10320
+        self.game.handle_time()
+        self.assertEqual("0:2:0", self.game.time)
+    def test_handle_time_works_correctly_if_no_end_time(self):
+        self.game.start_time = 10200
+        self.game.handle_time()
+        self.assertEqual("NO TIME", self.game.time)
+    def test_handle_time_works_correctly_if_no_start_time(self):
+        self.game.end_time = 10320
+        self.game.handle_time()
+        self.assertEqual("NO TIME", self.game.time)
+    def test_game_over_lost_makes_handle_time_work_correctly(self):
+        self.game.start_time = 10200
+        self.game.end_time = 10320
+        self.game.game_over_lost(0,0)
+        self.assertEqual("0:2:0", self.game.time)
+    def test_game_over_won_makes_hanle_time_work_correctly(self):
+        self.game.start_time = 10200
+        self.game.end_time = 10320
+        self.game.game_over_won()
+        self.assertEqual("0:2:0", self.game.time)
     
