@@ -15,13 +15,17 @@ class Game:
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
         self.start_time = None
         self.end_time = None
+        self.time = None
+        self.font = None
+        self.font_small = None
     def run_game(self):
         while True:
             pygame.init()
+            self.font = pygame.font.SysFont("ARIAL", 50, 1)
+            self.font_small = pygame.font.SysFont("ARIAL", 25, 1)
             pygame.display.set_caption(f"MINESWEEPER - {self.title}")
             self.running = True
             self.loop()
-            self.handle_time()
             break
         return
     def handle_time(self):
@@ -30,12 +34,14 @@ class Game:
         difference = difference - hours*3600
         minutes = difference // 60
         seconds = difference - minutes*60
-        print('%d:%d:%d' %(hours, minutes, seconds))
+        self.time = ('%d:%d:%d' %(hours, minutes, seconds))
     def game_over_lost(self, y_value, x_value):
+        self.handle_time()
         self.field.open_all()
         self.field.blow_up_a_mine(y_value, x_value)
         self.game_lost = True
     def game_over_won(self):
+        self.handle_time()
         self.field.open_all()
         self.game_won = True
     def check_for_win(self):
@@ -80,7 +86,7 @@ class Game:
                 if event.button == 1:
                     if self.game_lost:
                         self.running = False
-                    if self.game_won:
+                    elif self.game_won:
                         self.running = False
                     else:
                         position = pygame.mouse.get_pos()
@@ -94,7 +100,29 @@ class Game:
             for x_value in range(self.field_width):
                 cell = self.field.field[y_value][x_value]
                 self.screen.blit(cell.image, (x_value*self.cell_size, y_value*self.cell_size))
+        if self.game_lost:
+            self.game_lost_graphics()
+        if self.game_won:
+            self.game_won_graphics()
         pygame.display.flip()
+    def game_lost_graphics(self):
+        game_lost = self.font.render("GAME LOST", True, (255, 255, 255), (128, 0, 0))
+        self.screen.blit(game_lost, (self.screen_width//2 - 150, self.screen_height//2 - 50))
+        text1 = ("YOUR TIME: " + self.time)
+        time = self.font_small.render(text1, True, (255, 255, 255), (128, 0, 0))
+        self.screen.blit(time, (self.screen_width // 2 - 105, self.screen_height // 2 + 10))
+        text2 = "click anywhere to go back"
+        back = self.font_small.render(text2, True, (255, 255, 255), (128, 0, 0))
+        self.screen.blit(back, (self.screen_width//2 - 153, self.screen_height//2 + 80))
+    def game_won_graphics(self):
+        game_won = self.font.render("GAME WON!", True, (255, 255, 255), (0, 150, 150))
+        self.screen.blit(game_won, (self.screen_width//2 - 150, self.screen_height // 2 -50))
+        text1 = ("YOUR TIME: " + self.time)
+        time = self.font_small.render(text1, True, (255, 255, 255), (0, 150, 150))
+        self.screen.blit(time, (self.screen_width // 2 - 105, self.screen_height // 2 + 10))
+        text2 = "click anywhere to go back"
+        back = self.font_small.render(text2, True, (255, 255, 255), (0, 150, 150))
+        self.screen.blit(back, (self.screen_width//2 - 153, self.screen_height//2 + 80))
     def loop(self):
         while self.running:
             self.check_events()

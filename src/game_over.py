@@ -32,7 +32,7 @@ class GameOver:
             for x_value in range(self.field_width):
                 cell = self.field.field[y_value][x_value]
                 self.screen.blit(cell.image, (x_value*self.cell_size, y_value*self.cell_size))
-        
+                
         pygame.display.flip()
     
 

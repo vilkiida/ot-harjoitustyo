@@ -14,7 +14,7 @@ class MainMenu:
         self.background_color = (50, 50, 50)
         pygame.init()
         pygame.display.set_caption("MINESWEEPER")
-        self.font = pygame.font.SysFont("Arial", 50)
+        self.font = pygame.font.SysFont("Arial", 50, 1)
         self.loop()
     def draw_button(self, button):
         pygame.draw.rect(self.screen, self.button_color, button)

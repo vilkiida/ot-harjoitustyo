@@ -17,8 +17,8 @@ class HighscoresMenu:
     def run_menu(self):
         pygame.init()
         pygame.display.set_caption("MINESWEEPER - highscores")
-        self.font = pygame.font.SysFont("Arial", 50)
-        self.font_small = pygame.font.SysFont("Arial", 30)
+        self.font = pygame.font.SysFont("Arial", 50, 1)
+        self.font_small = pygame.font.SysFont("Arial", 30, 1)
         self.running = True
         self.loop()
     def click(self, position):
