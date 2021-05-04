@@ -1,9 +1,31 @@
+""" moduuli, joka sisältää gamemenu luokan
+"""
 import pygame
 from gamemodules.game import Game
 from gamemodules.field import Field
 
 class GameMenu:
+    """ Luokka, joka vastaa pelivalikosta.
+    Attributes:
+        running: Boolean-arvo, joka kuvaa onko pelivalikko käynnissä.
+        screen_height: Lukuarvo, joka kuvaa näytön korkeutta pikseleinä.
+        screen_width: Lukuarvo, joka kuvaa näytön leveyttä pikseleinä.
+        easy_button: pygamen rect-olio, joka kuvaa valikon easy näppäintä.
+        easy: Tuple, jonka arvot ovat easy tasoisen pelin korkeus, leveys ja miinojen määrä.
+        mediumhard_button: pygamen rect-olio, joka kuvaa valikon mediumhard näppäintä.
+        mediumhard: Tuple, jonka arvot ovat mediumhard tasoisen pelin korkeus, leveys ja miinojen määrä.
+        expert_button: pygamen rect-olio, joka kuvaa valikon expert näppäintä.
+        expert: Tuple, jonka arvot ovat expert tasoisen pelin korkeus, leveys, ja miinojen määrä.
+        back_button: pygamen rect-olio, joka kuvaa valikon back näppäintä.
+        button_color: Tuple, joka kuvaa värikoodina valikon näppäimien väriä.
+        background_color: Tuple, joka kuvaa värikoodina valikon taustan väriä.
+        cell_size: Lukuarvo, joka kuvaa yksittäisen miinaharavakentän ruudun kokoa pikseleinä.
+        font: pygame fontti valikon suuremmille teksteille.
+        font_small: pygame fontti valikon pienemmille teksteille. 
+    """
     def __init__(self):
+        """ Luokan kostruktori.
+        """
         self.running = False
         self.screen_height = 600
         self.screen_width = 500
@@ -21,12 +43,18 @@ class GameMenu:
         self.font = None
         self.font_small = None
     def run_menu(self):
+        """ Käynnistää pelivalikon
+        """
         pygame.init()
         self.font = pygame.font.SysFont("Arial", 50, 1)
         self.font_small = pygame.font.SysFont("Arial", 30, 1)
         self.running = True
         self.loop()
     def click(self, position):
+        """ Käsittelee vasemman hiiren näppäimen painalluksesta seuraavat toimenpiteet.
+        Args:
+            position: Tuple, joka kuvaa koordinaatteja pisteeseen, jossa hiiri oli klikkaus hetkellä
+        """
         if self.easy_button.collidepoint(position):
             self.setup_game(self.easy, "easy")
             self.reset_screen_size()
