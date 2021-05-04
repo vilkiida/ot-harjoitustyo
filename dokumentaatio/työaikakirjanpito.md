@@ -21,4 +21,5 @@ Päivä | Aika | Mitä tein?
 3.5 | 2h | Highscores osio aloitettu. Kesken...
 4.5 | 2h | Lisätty ei näkyvissä oleva ajan otto pelistä ja pelin loppuun tekstit "game won" ja "game lost" sekä ajan näyttäminen. 
 4.5 | 2h | Lisätty docstringit moduuleihin cell, field ja game
-YHT| 46-48 
+4.5 | 4h | Viikon 6 tavotteiden suorittamista.
+YHT| 50-52 
