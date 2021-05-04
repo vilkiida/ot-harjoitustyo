@@ -1,7 +1,7 @@
 import pygame
-from gamemenu import GameMenu
-from highscores_menu import HighscoresMenu
-from instructions import Instruction
+from menumodules.gamemenu import GameMenu
+from menumodules.highscores_menu import HighscoresMenu
+from othermodules.instructions import Instruction
 class MainMenu:
     def __init__(self):
         self.screen_height = 600

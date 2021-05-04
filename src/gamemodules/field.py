@@ -1,7 +1,7 @@
 """ Moduuli, joka sisältää luokan Field.
 """
 from random import randint
-from cell import Cell
+from gamemodules.cell import Cell
 class Field:
     """ Luokka, joka kuvaa yksittäistä pelikenttää.
     Attributes:

@@ -1,8 +1,7 @@
 """ Moduuli, joka sisältää luokan Cell.
 """
-import os
 import pygame
-DIRNAME = os.path.dirname(__file__)
+from load_image import load_image
 class Cell:
     """ Luokka, joka kuvaa yksittäistä ruutua miinaharavakentässä.
 
@@ -26,7 +25,7 @@ class Cell:
         self.neighbours = []
         self.neighbour_mines = None
         if not self.opened:
-            self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-unopened.png"))
+            self.image = load_image("ms-unopened.png")
     def is_a_mine(self):
         """ Palauttaa arvon True, jos kyseisessä ruudussa on miina,. Muuten funktio palauttaa False.
         """
@@ -85,30 +84,30 @@ class Cell:
             self.opened = True
             if not self.mine:
                 if self.neighbour_mines == 0:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-opened.png"))
+                    self.image = load_image("ms-opened.png")
                 elif self.neighbour_mines == 1:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-1.png"))
+                    self.image = load_image("ms-1.png")
                 elif self.neighbour_mines == 2:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-2.png"))
+                    self.image = load_image("ms-2.png")
                 elif self.neighbour_mines == 3:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-3.png"))
+                    self.image = load_image("ms-3.png")
                 elif self.neighbour_mines == 4:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-4.png"))
+                    self.image = load_image("ms-4.png")
                 elif self.neighbour_mines == 5:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-5.png"))
+                    self.image = load_image("ms-5.png")
                 elif self.neighbour_mines == 6:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-6.png"))
+                    self.image = load_image("ms-6.png")
                 elif self.neighbour_mines == 7:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-7.png"))
+                    self.image = load_image("ms-7.png")
                 elif self.neighbour_mines == 8:
-                    self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-8.png"))
+                    self.image = load_image("ms-8.png")
             else:
-                self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-mine.png"))
+                self.image = load_image("ms-mine.png")
     def mark_flagg(self):
         """ Merkitsee kyseisen ruudun lipulla, eli muuttaa flagged attribuutin arvoksi True.
         """
         self.flagged = True
-        self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-flag.png"))
+        self.image = load_image("ms-flag.png")
     def mark_questionmark(self):
         """ Merkitsee kyseisen ruudun kysymysmerkiksi,
             eli muuttaa flagged attribuutin arvon arvoksi False ja
@@ -116,16 +115,16 @@ class Cell:
         """
         self.flagged = False
         self.questionmark = True
-        self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-qm.png"))
+        self.image = load_image("ms-qm.png")
     def remove_markings(self):
         """ Poistaa kyseisestä ruudusta sekä lippu, että kysymysmerkki merkinnät.
             Se siis muuttaa sekä flagged, että questionmark attribuuttien arvot arvoksi False
         """
         self.flagged = False
         self.questionmark = False
-        self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-unopened.png"))
+        self.image = load_image("ms-unopened.png")
     def blow_up(self):
         """ Merkitsee erinäköisellä kuvalla miinan, jonka pelaaja on avaamalla räjäyttänyt.
             Se muttaa siis attribuutin image arvoa.
         """
-        self.image = pygame.image.load(os.path.join(DIRNAME, "assets", "ms-mine2.png"))
+        self.image = load_image("ms-mine2.png")

@@ -1,6 +1,6 @@
 import pygame
-from game import Game
-from field import Field
+from gamemodules.game import Game
+from gamemodules.field import Field
 
 class GameMenu:
     def __init__(self):
