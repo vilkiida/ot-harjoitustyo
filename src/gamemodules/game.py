@@ -61,12 +61,15 @@ class Game:
         """ Laskee start_timen ja end_timen avulla peliin kuluneen ajan ja
             palauttaa sen oikeassa muodossa.
         """
-        difference = self.end_time - self.start_time
-        hours = difference // 3600
-        difference = difference - hours*3600
-        minutes = difference // 60
-        seconds = difference - minutes*60
-        self.time = ('%d:%d:%d' %(hours, minutes, seconds))
+        if self.end_time != None:
+            difference = self.end_time - self.start_time
+            hours = difference // 3600
+            difference = difference - hours*3600
+            minutes = difference // 60
+            seconds = difference - minutes*60
+            self.time = ('%d:%d:%d' %(hours, minutes, seconds))
+        else:
+            self.time = "NO TIME"
     def game_over_lost(self, y_value, x_value):
         """ Tekee pelin häviämisen jälkeen tapahtuvat toimenpiteet.
             Näitä ovat: ajan laskeminen, kaikkien ruutujen avaaminen,

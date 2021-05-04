@@ -1,5 +1,5 @@
 import unittest
-from cell import Cell
+from gamemodules.cell import Cell
 
 class TestCell(unittest.TestCase):
     def setUp(self):

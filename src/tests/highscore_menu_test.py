@@ -1,5 +1,5 @@
 import unittest
-from highscores_menu import HighscoresMenu
+from menumodules.highscores_menu import HighscoresMenu
 
 class TestHighscoresMenu(unittest.TestCase):
     def setUp(self):

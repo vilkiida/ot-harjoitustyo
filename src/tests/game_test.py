@@ -1,6 +1,6 @@
 import unittest
-from game import Game
-from field import Field
+from gamemodules.game import Game
+from gamemodules.field import Field
 
 class TestGame(unittest.TestCase):
     def setUp(self):

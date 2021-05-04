@@ -1,5 +1,5 @@
 import unittest
-from instructions import Instruction
+from othermodules.instructions import Instruction
 
 class TestGameMenu(unittest.TestCase):
     def setUp(self):
