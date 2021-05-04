@@ -59,5 +59,5 @@ kysytään pelaajalta sen haluama nimimerkki
 - [ ] sovelluksen pelivalikon koodin jäsentelyn parantaminen (vähemmän toisteista koodia pelivalikoissa)
 
 ## Jatkokehitysideoita
-- [ ] mukautettu vaikeustaso, jossa
+- mukautettu vaikeustaso, jossa
 saa siis itse valita ruudukon koon ja miinojen määrä
