@@ -26,7 +26,7 @@ class TestGame(unittest.TestCase):
                     all_closed=False
         self.assertEqual(True, all_closed)
     def test_setup_screen_height_correct(self):
-        height=50*9
+        height=50*9+50
         self.assertEqual(height, self.game.screen_height)
     def test_setup_screen_width_correct(self):
         width=50*8

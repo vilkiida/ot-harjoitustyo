@@ -34,7 +34,7 @@ class Game:
         self.field_width = field.width
         self.field_height = field.height
         self.screen_width = self.cell_size*self.field_width
-        self.screen_height = self.cell_size*self.field_height
+        self.screen_height = self.cell_size*self.field_height+self.cell_size
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
         self.title = title
         self.running = False
@@ -111,18 +111,19 @@ class Game:
         """
         x_value = position[0] // self.cell_size
         y_value = position[1] // self.cell_size
-        if self.is_first_move():
-            self.start_time = time.time()
-        if self.field.field[y_value][x_value].is_a_mine():
-            if not self.field.field[y_value][x_value].is_flagged():
-                if not self.field.field[y_value][x_value].is_questionmark():
+        if y_value <= (self.field_height-1):
+            if self.is_first_move():
+                self.start_time = time.time()
+            if self.field.field[y_value][x_value].is_a_mine():
+                if not self.field.field[y_value][x_value].is_flagged():
+                    if not self.field.field[y_value][x_value].is_questionmark():
+                        self.end_time = time.time()
+                        self.game_over_lost(y_value, x_value)
+            else:
+                self.field.open_cell(y_value, x_value)
+                if self.check_for_win():
                     self.end_time = time.time()
-                    self.game_over_lost(y_value, x_value)
-        else:
-            self.field.open_cell(y_value, x_value)
-            if self.check_for_win():
-                self.end_time = time.time()
-                self.game_over_won()
+                    self.game_over_won()
     def is_first_move(self):
         """ Tarkistaa onko kaikki ruudut vielä avaamattomia, eli onko
         seuraava klikkaus ensimmäinen.
@@ -164,11 +165,13 @@ class Game:
     def draw_screen(self):
         """ Piirtää näytölle halutut asiat.
         """
-        self.screen.fill((255, 0, 0))
+        self.screen.fill((0, 0, 0))
         for y_value in range(self.field_height):
             for x_value in range(self.field_width):
                 cell = self.field.field[y_value][x_value]
                 self.screen.blit(cell.image, (x_value*self.cell_size, y_value*self.cell_size))
+            found_mines = self.count_found_mines()
+            self.mines_found_graphics(found_mines)
         if self.game_lost:
             self.game_lost_graphics()
         if self.game_won:
@@ -196,6 +199,10 @@ class Game:
         text2 = "click anywhere to go back"
         back = self.font_small.render(text2, True, (255, 255, 255), (0, 150, 150))
         self.screen.blit(back, (self.screen_width//2 - 153, self.screen_height//2 + 80))
+    def mines_found_graphics(self, found_mines):
+        found_mines_text=str(found_mines) + " / " + str(self.field.how_many_mines)
+        mines_found = self.font_small.render(found_mines_text, True, (255,255,255))
+        self.screen.blit(mines_found, (self.screen_width - 80, self.screen_height - 40))
     def loop(self):
         """ Peli silmukka, joka tarkistaa tapahtumat ja piirtää näytön,
             aina uudelleen, niin kauan kunnes peli ei ole enää käynnissä.
@@ -203,3 +210,15 @@ class Game:
         while self.running:
             self.check_events()
             self.draw_screen()
+    def count_found_mines(self):
+        found_mines=0
+        if self.game_won:
+            return self.field.how_many_mines
+        for y_value in range(self.field_height):
+            for x_value in range(self.field.width):
+                if self.field.is_cell_flagged(y_value, x_value):
+                    found_mines+=1
+        
+        return found_mines
+
+

@@ -127,4 +127,4 @@ class Cell:
         """ Merkitsee erinäköisellä kuvalla miinan, jonka pelaaja on avaamalla räjäyttänyt.
             Se muttaa siis attribuutin image arvoa.
         """
-        self.image = load_image("ms-mine2.png")
+        self.image = load_image("ms-red-mine.png")

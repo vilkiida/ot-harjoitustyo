@@ -144,9 +144,7 @@ class Field:
             y_value: Lukuarvo, joka kuvaa kyseessä olevan ruudun y-koordinaatin arvoa.
             x_value: Lukuarvo, joka kuvaa kyseessä olevan ruudun x-koordinaatin arvoa.
         """
-        if self.field[y_value][x_value].is_a_mine():
-            return True
-        return False
+        return self.field[y_value][x_value].is_a_mine()
     def is_cell_opened(self, y_value, x_value):
         """ Palauttaa arvon True, jos annetut koordinaatit omaava ruutu on avattu.
             Muuten palauttaa arvon False.
@@ -154,6 +152,12 @@ class Field:
             y_value: Lukuarvo, joka kuvaa kyseessä olevan ruudun y-koordinaatin arvoa.
             x_value: Lukuarvo, joka kuvaa kyseessä olevan ruudun x-koordinaatin arvoa.
         """
-        if self.field[y_value][x_value].is_opened():
-            return True
-        return False
+        return self.field[y_value][x_value].is_opened()
+    def is_cell_flagged(self, y_value, x_value):
+        """ Palauttaa arvon True, jos annetut koordinaatit omaava ruutu on merkitty
+            lipulla. Muuten palauttaa arvon False.
+        Args:
+            y_value: Lukuarvo, joka kuvaa kyseessä olevan ruudun y-koordinaatin arvoa.
+            x_value: Lukuarvo, joka kuvaa kyseessä olevan ruudun x-koordinaatin arvoa.
+        """
+        return self.field[y_value][x_value].is_flagged()
