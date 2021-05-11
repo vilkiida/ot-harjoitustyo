@@ -27,6 +27,9 @@ https://commons.wikimedia.org/wiki/File:Minesweeper_8.svg
 ## mine:
 https://thenounproject.com/term/naval-mine/628505/
 
+## red backround for the mine that's blown up:
+https://commons.wikimedia.org/wiki/File:Red.svg
+
 ## flag:
 https://commons.wikimedia.org/wiki/File:Minesweeper_flag.svg?uselang=fi
 
