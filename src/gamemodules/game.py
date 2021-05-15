@@ -2,6 +2,7 @@
 """
 import time
 import pygame
+from databasemodules.highscore_handling import Highscores
 class Game:
     """ Luokka, joka vastaa yksittäisen miinaharava pelin toiminnasta.
     Attributes:
@@ -37,6 +38,9 @@ class Game:
         self.screen_height = self.cell_size*self.field_height+self.cell_size
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
         self.title = title
+        self.back_button = pygame.Rect(10, self.screen_height - 40, 100, 30)
+        self.button_color = (140, 140, 150)
+        self.db = Highscores()
         self.running = False
         self.game_lost = False
         self.game_won = False
@@ -88,6 +92,9 @@ class Game:
             Näitä ovat: ajan laskeminen, kaikkien ruutujen avaaminen
             sekä pelin merkitseminen voitetuksi
         """
+        time_in_seconds = self.end_time - self.start_time
+        time_in_seconds = f"{time_in_seconds:.0f}"
+        self.db.new_score(time_in_seconds, self.title)
         self.handle_time()
         self.field.open_all()
         self.game_won = True
@@ -124,6 +131,9 @@ class Game:
                 if self.check_for_win():
                     self.end_time = time.time()
                     self.game_over_won()
+        else:
+            if self.back_button.collidepoint(position):
+                self.running = False
     def is_first_move(self):
         """ Tarkistaa onko kaikki ruudut vielä avaamattomia, eli onko
         seuraava klikkaus ensimmäinen.
@@ -144,6 +154,10 @@ class Game:
         x_value = position[0] // self.cell_size
         y_value = position[1] // self.cell_size
         self.field.mark_a_cell(y_value, x_value)
+    def draw_back_button(self):
+        pygame.draw.rect(self.screen, self.button_color, self.back_button)
+        button_text = self.font_small.render("BACK", True, (0, 0, 0))
+        self.screen.blit(button_text, (22, self.screen_height - 37))
     def check_events(self):
         """ Tarkistaa kaikki pelin tapahtumat.
         """
@@ -170,8 +184,9 @@ class Game:
             for x_value in range(self.field_width):
                 cell = self.field.field[y_value][x_value]
                 self.screen.blit(cell.image, (x_value*self.cell_size, y_value*self.cell_size))
-            found_mines = self.count_found_mines()
-            self.mines_found_graphics(found_mines)
+        found_mines = self.count_found_mines()
+        self.mines_found_graphics(found_mines)
+        self.draw_back_button()
         if self.game_lost:
             self.game_lost_graphics()
         if self.game_won:

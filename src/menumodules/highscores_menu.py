@@ -1,5 +1,5 @@
 import pygame
-
+from othermodules.highscores_page import HighscorePage
 class HighscoresMenu:
     def __init__(self):
         self.running = False
@@ -23,11 +23,17 @@ class HighscoresMenu:
         self.loop()
     def click(self, position):
         if self.easy_button.collidepoint(position):
-            print("highscores for the level easy coming soon...")
+            easy_score_page = HighscorePage("easy")
+            easy_score_page.run_highscore_page()
+            self.reset_caption()
         if self.mediumhard_button.collidepoint(position):
-            print("highscores for the level mediumhard coming soon...")
+            mediumhard_score_page = HighscorePage("mediumhard")
+            mediumhard_score_page.run_highscore_page()
+            self.reset_caption()
         if self.expert_button.collidepoint(position):
-            print("highscores for the level expert coming soon...")
+            expert_score_page = HighscorePage("expert")
+            expert_score_page.run_highscore_page()
+            self.reset_caption()
         if self.back_button.collidepoint(position):
             self.running = False
     def draw_button(self, button):
@@ -64,4 +70,6 @@ class HighscoresMenu:
         while self.running:
             self.check_events()
             self.draw_screen()
+    def reset_caption(self):
+        pygame.display.set_caption("MINESWEEPER - highscores")
             
