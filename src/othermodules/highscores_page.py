@@ -1,3 +1,4 @@
+from datetime import datetime
 import pygame
 from databasemodules.highscore_handling import Highscores
 
@@ -18,7 +19,7 @@ class HighscorePage:
     def run_highscore_page(self):
         pygame.init()
         pygame.display.set_caption("MINESWEEPER - highscores-" + self.difficulty)
-        self.font = pygame.font.SysFont("Arial", 30)
+        self.font = pygame.font.SysFont("Arial", 30, True)
         self.font_smaller = pygame.font.SysFont("Arial", 20)
         self.running = True
         self.loop()
@@ -64,20 +65,32 @@ class HighscorePage:
         return self.db.get_high_scores(self.difficulty)
     def erase_scores(self):
         self.db.erase_scores(self.difficulty)
+    def format_time(self, time):
+        hours = time // 3600
+        time - hours*3600
+        minutes = time // 60
+        seconds = time - minutes*60
+        return ('%d:%d:%d' %(hours, minutes, seconds))
+    def format_date(self, date):
+        return date.strftime("%d.%m.%Y")
     def draw_scoreboard(self):
         scores = self.get_highscores()
         x_value=63
         y_value=150
+        text_date = "DATE"
+        text_score = "SCORE"
+        titles_text = f"{text_date:>35}               {text_score}"
+        titles = self.font_smaller.render(titles_text, True, (220, 220, 220))
+        self.screen.blit(titles, (x_value, y_value))
+        y_value+=40
         for i in range(0, 5):
             try:
-                time = scores[i]
-                hours = time // 3600
-                time - hours*3600
-                minutes = time // 60
-                seconds = time - minutes*60
-                score_time = ('%d:%d:%d' %(hours, minutes, seconds))
+                time = scores[i][1]
+                score_time = self.format_time(time)
                 rank = f"{i+1}."
-                score_text = f"{rank:55}{score_time}"
+                date = scores[i][0]
+                date = self.format_date(date)
+                score_text = f"{rank:33}{date}{score_time}"
             except:
                 rank = f"{i+1}."
                 score_text = f"{rank}   ----------------- NO SCORE -----------------"

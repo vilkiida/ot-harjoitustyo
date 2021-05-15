@@ -24,4 +24,5 @@ Päivä | Aika | Mitä tein?
 4.5 | 4h | Viikon 6 tavotteiden suorittamista.
 12.5 |1,5h| Lisätty mm. merkattujen/löydettyjen miinojen laskuri.
 13.5| 2h | Highscorelistojen lisäämistä. Highscore_handling.py toimii tietokannan kanssa. Valikon highscore osaa aloitettu.
-YHT| 53,5-55,5 
+15.5| 4h | Highscore listojen tekeminen jatkuu..
+YHT| 57,5-59,5 

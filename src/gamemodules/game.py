@@ -1,5 +1,6 @@
 """ Moduuli, joka sisältää luokan Game.
 """
+from datetime import datetime
 import time
 import pygame
 from databasemodules.highscore_handling import Highscores
@@ -94,7 +95,7 @@ class Game:
         """
         time_in_seconds = self.end_time - self.start_time
         time_in_seconds = f"{time_in_seconds:.0f}"
-        self.db.new_score(time_in_seconds, self.title)
+        self.db.new_score(datetime.now(), time_in_seconds, self.title)
         self.handle_time()
         self.field.open_all()
         self.game_won = True
