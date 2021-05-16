@@ -27,4 +27,5 @@ Päivä | Aika | Mitä tein?
 15.5| 4h | Highscore listojen tekeminen jatkuu..
 16.5| 1,5h |Highscore lista tehty valmiiksi. Nimimerkin sijaan tallennetaankin aikaleima (sillä todennäkköisesti vain yksi pelaaja ja tällöin aika on hyödyllisempi tieto).
 16.5| 6h | Ongelmien korjailua, docstringien kirjoittamista, testien lisäämistä, pylint arvosanan parantamista ja dokumentaation kirjoittamista.
-YHT| 65-67 
+16.5| 2h | Lisää dokumentaation kirjoittamista ja koodin siistimistä ja testejä.
+YHT| 67-69 
