@@ -25,4 +25,5 @@ Päivä | Aika | Mitä tein?
 12.5 |1,5h| Lisätty mm. merkattujen/löydettyjen miinojen laskuri.
 13.5| 2h | Highscorelistojen lisäämistä. Highscore_handling.py toimii tietokannan kanssa. Valikon highscore osaa aloitettu.
 15.5| 4h | Highscore listojen tekeminen jatkuu..
-YHT| 57,5-59,5 
+16.5| 1,5h |Highscore lista tehty valmiiksi. Nimimerkin sijaan tallennetaankin aikaleima (sillä todennäkköisesti vain yksi pelaaja ja tällöin aika on hyödyllisempi tieto).
+YHT| 59-61 
