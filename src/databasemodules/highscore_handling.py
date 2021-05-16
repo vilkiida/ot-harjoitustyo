@@ -26,7 +26,7 @@ class Highscores:
         return highscores
     def drop_table(self):
         try:
-            sql = "DROP TABLE highscores"
+            sql = "DROP TABLE if exists highscores"
             self.db.execute(sql)
         except:
             print("Unable to drop table")
