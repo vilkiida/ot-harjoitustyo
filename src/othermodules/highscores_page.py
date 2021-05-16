@@ -75,7 +75,7 @@ class HighscorePage:
     def format_date(self, date):
         date = date[:16]
         datetime_object = datetime.strptime(date, "%Y-%m-%d %H:%M")
-        return datetime_object.strftime("%H:%M %Y.%m.%d")
+        return datetime_object.strftime("%H:%M %d.%m.%y")
     def draw_scoreboard(self):
         scores = self.get_highscores()
         x_value=63
@@ -92,7 +92,7 @@ class HighscorePage:
                 score_time = self.format_time(time)
                 rank = f"{i+1}."
                 formatted_date = self.format_date(scores[i][0])
-                score_text = f"{rank:16}{formatted_date}         {score_time}"
+                score_text = f"{rank:17}{formatted_date}            {score_time}"
             except:
                 rank = f"{i+1}."
                 score_text = f"{rank}   ----------------- NO SCORE -----------------"
