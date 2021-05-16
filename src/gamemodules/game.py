@@ -68,6 +68,8 @@ class Game:
         """
         if self.end_time is not None and self.start_time is not None:
             difference = self.end_time - self.start_time
+            difference = f"{difference:.0f}"
+            difference = int(difference)
             hours = difference // 3600
             difference = difference - hours*3600
             minutes = difference // 60
