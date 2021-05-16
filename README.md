@@ -16,7 +16,7 @@ Miinaharava-pelisovellus. Pelin ideana on siis avata tyhjiä ruutuja ja merkata 
 [Arkkitehtuurikuvaus](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 
-[Käytöohje](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+[Käyttöohje](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 
 [Testaus](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
