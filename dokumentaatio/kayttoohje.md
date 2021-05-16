@@ -53,7 +53,7 @@ Takaisin päävalikkoon pääsee klikkaamalla **BACK** painiketta.
 - Pelissä ruutuja avataan vasemmalla hiiren painikkeella.
 - Merkkaukset tehdään hiiren oikeaa painiketta käyttäen. Avaamaton ruutu muuttuu oikealla klikattaessa liputetuksi, liputettu ruutu kysymysmerkiksi ja kysymysmerkillä merkattu takaisin merkkaamattomaksi aavaamattomaksi ruuduksi.
 - Lipulla tai kysymysmerkillä merkittyä ruutua, ei voi avata vasemmalla hiiren klikkauksella. Merkinnät tulee poistaa ennen kuin tämä on mahdollista.
-- Lipulla merkityt eli ns. "löydetyt miinat" näkyvät peliruudun alalaidassa olevassa laskurissa, jossa näkyy löydettyjen miinojen osuus pelikentällä yhteensä olevien miinojen määrästä. Viimeiseksi avaamatta jäänyt miina ruutu lasketaan myös löydetyksi ja tällöin peli voitetaan.
+- Lipulla merkityt eli ns. "löydetyt miinat" näkyvät peliruudun alalaidassa olevassa laskurissa, jossa näkyy löydettyjen miinojen osuus pelikentällä yhteensä olevien miinojen määrästä. Viimeiseksi avaamatta jäänyt miina ruutu lasketaan myös löydetyksi (tässä tapauksessa peli voitetaan).
 - Avattu ruutu on joko tyhjä eli sen ympärillä ei ole miinoja tai siinä on lukuarvo, joka kertoo ruutua ympäröivien miinojen määrän. 
 - Peli voitetaan, kun kaikki miinattomat ruudut ovat avattu.
 - Peli hävitään, jos avataan ruutu, jossa on miina.
