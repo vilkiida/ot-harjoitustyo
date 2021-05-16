@@ -18,20 +18,20 @@ Miinaharava-pelisovellus. Pelin ideana on siis avata tyhjiä ruutuja ja merkata 
 
 [Käytöohje](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
-## Miinaharava sovelluksen viikon 5 release:
 
-[Viikon 5 release](https://github.com/vilkiida/ot-harjoitustyo/releases/tag/viikko5)
-
-[Viikon 6 release](https://github.com/vilkiida/ot-harjoitustyo/releases/tag/viikko6)
+[Testaus](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 ## Miinaharava sovelluksen käyttöohjeet:
 
-1. Ensin asenna riippuvuudet "poetry install" komennolla
-2. Pelin saat käynnistettyä "poetry run invoke start" komennolla
-3. Jos haluat suorittaa sovelluksen testit, voit suorittaa ne komennolla "poetry run invoke test"
+1. Ensin asenna riippuvuudet **poetry install** komennolla
+2. Ennen pelin ensimmäistä käynnistämistä alustetaan SQL-tietokanta komennolla **poetry run invoke initialize**
+3. Pelin saat käynnistettyä **poetry run invoke start** komennolla
+4. Suorittaaksesi sovelluksen testit, käytä komentoa **poetry run invoke test**
+5. Suorittaaksesi testikattavuusraportin, käytä komentoa **poetry run invoke coverage-report**
+6. Suorittaaksesi pylint arvion, käytä komentoa **poetry run invoke lint**
 
 ### Ohjeita miinaharava pelin käyttöön:
-- Kun olet voittanut tai hävinnyt miinaharavapelin klikkaamalla mihin tahansa kohtaan ruutua, pääset takaisin pelivalikkoon (kohtaan jossa valitaan vaikeustaso).
-- Pelivalikon highscores sivulla olevat easy, mediumhard ja expert näppäimien painaminen ei vielä tee muuta kuin printtaa tekstin "highscores for the level [klikattu vaikeustaso] coming soon...", sillä highscores osio on vielä kesken.
+
+Katso [Käyttöohje](https://github.com/vilkiida/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 
