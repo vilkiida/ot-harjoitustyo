@@ -15,6 +15,9 @@ class Game:
         screen_height: Lukuarvo, joka kuvastaa pelin näytön korkeutta.
         screen: muuttuja, johon on tallennettuna pelin näyttö.
         title: Merkkijonoarvo, joka kuvaa peli-ikkunaan merkittävää otsikkoa.
+        backbutton: Pygamen Rect olio, joka kuvaa back painiketta.
+        button_color: Tuple olio, joka kuvaa back painikkeen väriä.
+        database: Highscores olio, jonka avulla käsitellään tietokantaa.
         running: Boolean-arvo, joka kuvaa onko peli sillä hetkellä käynnissä.
         game_lost: Boolean-arvo, joka kuvaa onko peli hävitty.
         game_won: Boolean-arvo, joka kuvaa onko peli voitettu.
@@ -41,7 +44,7 @@ class Game:
         self.title = title
         self.back_button = pygame.Rect(10, self.screen_height - 40, 100, 30)
         self.button_color = (140, 140, 150)
-        self.db = Highscores()
+        self.database = Highscores()
         self.running = False
         self.game_lost = False
         self.game_won = False
@@ -59,9 +62,8 @@ class Game:
             self.font_small = pygame.font.SysFont("ARIAL", 25, 1)
             pygame.display.set_caption(f"MINESWEEPER - {self.title}")
             self.running = True
-            self.loop()
+            self.gameloop()
             break
-        return
     def handle_time(self):
         """ Laskee start_timen ja end_timen avulla peliin kuluneen ajan ja
             palauttaa sen oikeassa muodossa.
@@ -97,7 +99,7 @@ class Game:
         """
         time_in_seconds = self.end_time - self.start_time
         time_in_seconds = f"{time_in_seconds:.0f}"
-        self.db.new_score(datetime.now(), time_in_seconds, self.title)
+        self.database.new_score(datetime.now(), time_in_seconds, self.title)
         self.handle_time()
         self.field.open_all()
         self.game_won = True
@@ -158,11 +160,13 @@ class Game:
         y_value = position[1] // self.cell_size
         self.field.mark_a_cell(y_value, x_value)
     def draw_back_button(self):
+        """ Piirtää näytölle back näppäimen ja näppäimen tekstin.
+        """
         pygame.draw.rect(self.screen, self.button_color, self.back_button)
         button_text = self.font_small.render("BACK", True, (0, 0, 0))
         self.screen.blit(button_text, (22, self.screen_height - 37))
     def check_events(self):
-        """ Tarkistaa kaikki pelin tapahtumat.
+        """ Tarkistaa kaikki olennaiset pelin tapahtumat.
         """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -218,10 +222,14 @@ class Game:
         back = self.font_small.render(text2, True, (255, 255, 255), (0, 150, 150))
         self.screen.blit(back, (self.screen_width//2 - 153, self.screen_height//2 + 80))
     def mines_found_graphics(self, found_mines):
+        """ Piirtää näytölle löydettyjen miinojen laskurin.
+        Args:
+            found_mines: Lukuarvo, joka kertoo, montako miinaa on löydetty.
+        """
         found_mines_text=str(found_mines) + " / " + str(self.field.how_many_mines)
         mines_found = self.font_small.render(found_mines_text, True, (255,255,255))
         self.screen.blit(mines_found, (self.screen_width - 80, self.screen_height - 40))
-    def loop(self):
+    def gameloop(self):
         """ Peli silmukka, joka tarkistaa tapahtumat ja piirtää näytön,
             aina uudelleen, niin kauan kunnes peli ei ole enää käynnissä.
         """
@@ -229,6 +237,8 @@ class Game:
             self.check_events()
             self.draw_screen()
     def count_found_mines(self):
+        """ Laskee montako miinaa on löydetty
+        """
         found_mines=0
         if self.game_won:
             return self.field.how_many_mines
@@ -236,7 +246,4 @@ class Game:
             for x_value in range(self.field.width):
                 if self.field.is_cell_flagged(y_value, x_value):
                     found_mines+=1
-        
         return found_mines
-
-

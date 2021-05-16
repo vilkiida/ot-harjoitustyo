@@ -43,9 +43,13 @@ class TestGame(unittest.TestCase):
                     all_open=False
         self.assertEqual(True, all_open)
     def test_game_over_won_makes_game_won_true(self):
+        self.game.end_time = 10320
+        self.game.start_time = 10200
         self.game.game_over_won()
         self.assertEqual(True, self.game.game_won)
     def test_game_over_won_makes_all_cells_open(self):
+        self.game.end_time = 10320
+        self.game.start_time = 10200
         self.game.game_over_won()
         all_open=True
         for y in range(self.game.field_height):
@@ -134,9 +138,18 @@ class TestGame(unittest.TestCase):
         self.game.end_time = 10320
         self.game.game_over_lost(0,0)
         self.assertEqual("0:2:0", self.game.time)
-    def test_game_over_won_makes_hanle_time_work_correctly(self):
+    def test_game_over_won_makes_handle_time_work_correctly(self):
         self.game.start_time = 10200
         self.game.end_time = 10320
         self.game.game_over_won()
         self.assertEqual("0:2:0", self.game.time)
-    
+    def test_clicking_back_button_turns_running_false(self):
+        self.game.running = True
+        self.game.left_click((11,self.game.screen_height - 39))
+    def test_count_found_mines_works(self):
+        self.assertEqual(0, self.game.count_found_mines())
+        self.game.field.field[0][0].flagged = True
+        self.game.field.field[0][1].flagged = True
+        self.assertEqual(2, self.game.count_found_mines())
+        self.game.game_won = True
+        self.assertEqual(10, self.game.count_found_mines())

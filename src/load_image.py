@@ -1,4 +1,4 @@
-""" moduuli, joka sisältää kuvan lataus funktion.
+""" moduuli, joka sisältää kuvanlataus funktion.
 """
 import os
 import pygame

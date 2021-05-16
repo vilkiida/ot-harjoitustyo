@@ -24,8 +24,7 @@ class Cell:
         self.questionmark = False
         self.neighbours = []
         self.neighbour_mines = None
-        if not self.opened:
-            self.image = load_image("ms-unopened.png")
+        self.image = load_image("ms-unopened.png")
     def is_a_mine(self):
         """ Palauttaa arvon True, jos kyseisessä ruudussa on miina,. Muuten funktio palauttaa False.
         """

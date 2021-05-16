@@ -35,6 +35,10 @@ class TestField(unittest.TestCase):
     def test_is_cell_a_mine_works_if_False(self):
         self.field.field[0][0].mine = False
         self.assertEqual(False, self.field.is_cell_a_mine(0,0))
+    def test_is_cell_flagged_works(self):
+        self.assertEqual(False, self.field.is_cell_flagged(0,0))
+        self.field.field[0][0].flagged = True
+        self.assertEqual(True, self.field.is_cell_flagged(0,0))
     def test_mark_a_cell_makes_flagged_if_cell_unmarked(self):
         self.field.mark_a_cell(0,0)
         self.assertEqual(True, self.field.field[0][0].flagged)

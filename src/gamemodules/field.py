@@ -62,8 +62,7 @@ class Field:
                     continue
                 if n_x > (self.width-1):
                     continue
-                else:
-                    neighbours.append((n_y, n_x))
+                neighbours.append((n_y, n_x))
         self.field[y_value][x_value].mark_neighbours(neighbours)
         self.check_neighbours(y_value, x_value)
     def check_neighbours(self, y_value, x_value):

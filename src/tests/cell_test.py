@@ -1,5 +1,6 @@
 import unittest
 from gamemodules.cell import Cell
+from load_image import load_image
 
 class TestCell(unittest.TestCase):
     def setUp(self):
@@ -66,3 +67,9 @@ class TestCell(unittest.TestCase):
         self.cell.questionmark = True
         self.cell.remove_markings()
         self.assertEqual(False, self.cell.questionmark)
+    
+    def test_wont_open_already_opened_cell(self):
+        self.cell.opened = True
+        self.cell.open()
+        self.assertEqual(True, self.cell.opened)
+    
