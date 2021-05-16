@@ -10,7 +10,7 @@ Kun tarvittavat riippuvuudet on asennettu "poetry install" -komennolla:
   -  Coverage raportti löytyy edellisen komennon jälkeen **htmlcov** kansion **index.html** tiedoston avaamalla selaimessa.
 
 ## SOVELLUKSEN KÄYTTÄMINEN:
-# Päävalikko:
+### Päävalikko:
 Sovellus aukeaa käynnistyttyään päävalikkoon:
 
 Päävalikon painikkeet voi valita painamalla niitä hiiren vasemmalla painikkeella.
@@ -18,7 +18,7 @@ Päävalikon painikkeet voi valita painamalla niitä hiiren vasemmalla painikkee
 - **HIGHSCORES** painike ohjaa sinut highscores-valikkoon.
 - **HELP** painike ohjaa sinut peliohje sivulle.
 
-# Pelivalikko:
+### Pelivalikko:
 Pelivalikossa voi valita haluamansa vaikeustason.
 
 Pelivalikon painikkeet voi valita painamalla niitä hiiren vasemmalla painikkeella.
@@ -27,7 +27,7 @@ Pelivalikon painikkeet voi valita painamalla niitä hiiren vasemmalla painikkeel
 - **EXPERT** painike käynnistää erittäin vaikeatasoisen miinaharavapelin.
 - **BACK** painike ohjaa sinut takaisin päävalikkoon.
 
-# Highscores-valikko:
+### Highscores-valikko:
 Highscores -valikossa voi valita minkä tason top5 - highscore-listan haluaa nähdä.
 
 Highscorevalikon painikkeet voi valita painamalla niitä hiiren vasemmalla painikkeella.
@@ -36,7 +36,7 @@ Highscorevalikon painikkeet voi valita painamalla niitä hiiren vasemmalla paini
 - **EXPERT** painike avaa vaikeatasoisen miinaharavapelin top5 - highscore-listan.
 - **BACK** painike ohjaa sinut takaisin päävalikkoon.
 
-# Highscore-sivut:
+### Highscore-sivut:
 Highscore-sivulla pystyy näkemään valitun tason top5 - highscore-listan.
 
 - Listaan on merkittu sijoittain 1-5 parhaat tulokset sekä päiväys+kellonaika, jolloin tulos on tehty.
@@ -44,12 +44,12 @@ Highscore-sivulla pystyy näkemään valitun tason top5 - highscore-listan.
 - **ERACE SCORES** painiketta painamalla hiiren vasemmalla painikkeella tyhjennetään kyseisen vaikeustason highscore lista.
 - **BACK** painiketta painamalla hiiren vasemalla painikkeella pääsee takaisin highscores-valikkoon.
 
-# How to play-sivu / Ohje-sivu:
+### How to play-sivu / Ohje-sivu:
 Ohje sivulla voi lukea lyhyen englanninkielisen peliohjeen. 
 
 Takaisin päävalikkoon pääsee klikkaamalla **BACK** painiketta.
 
-# Peli
+### Peli
 - Pelissä ruutuja avataan vasemmalla hiiren painikkeella.
 - Merkkaukset tehdään hiiren oikeaa painiketta käyttäen. Avaamaton ruutu muuttuu oikealla klikattaessa liputetuksi, liputettu ruutu kysymysmerkiksi ja kysymysmerkillä merkattu takaisin merkkaamattomaksi aavaamattomaksi ruuduksi.
 - Lipulla tai kysymysmerkillä merkittyä ruutua, ei voi avata vasemmalla hiiren klikkauksella. Merkinnät tulee poistaa ennen kuin tämä on mahdollista.
