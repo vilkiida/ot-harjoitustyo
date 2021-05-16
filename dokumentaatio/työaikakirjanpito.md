@@ -26,4 +26,5 @@ Päivä | Aika | Mitä tein?
 13.5| 2h | Highscorelistojen lisäämistä. Highscore_handling.py toimii tietokannan kanssa. Valikon highscore osaa aloitettu.
 15.5| 4h | Highscore listojen tekeminen jatkuu..
 16.5| 1,5h |Highscore lista tehty valmiiksi. Nimimerkin sijaan tallennetaankin aikaleima (sillä todennäkköisesti vain yksi pelaaja ja tällöin aika on hyödyllisempi tieto).
-YHT| 59-61 
+16.5| 6h | Ongelmien korjailua, docstringien kirjoittamista, testien lisäämistä, pylint arvosanan parantamista ja dokumentaation kirjoittamista.
+YHT| 65-67 
