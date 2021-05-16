@@ -32,7 +32,6 @@ class Highscores:
             self.database.execute(sql, [date, time, difficulty])
         except:
             print("Unable to add to highscores")
-    
     def get_high_scores(self, difficulty):
         """ Palauttaa listassa tiedot parhaimmasta 5 suorituksesta parhausjärjestyksessä
             parametrina annetussa vaikeustasossa.

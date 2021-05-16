@@ -107,7 +107,7 @@ class Instruction:
         lines.append("opening a cell that contains a mine.")
         x_value = 63
         y_value = 150
-        for i in range(len(lines)):
-            line = self.font_smaller.render(lines[i], True, (220, 220, 220))
+        for line_text in lines:
+            line = self.font_smaller.render(line_text, True, (220, 220, 220))
             self.screen.blit(line, (x_value, y_value))
             y_value+=30

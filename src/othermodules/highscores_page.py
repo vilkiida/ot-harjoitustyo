@@ -72,7 +72,9 @@ class HighscorePage:
         self.draw_button(self.back_button, self.button_color)
         self.draw_button_text("BACK", self.font, self.back_button.left+135, self.back_button.top+9)
         self.draw_button(self.erase_button, (246, 86, 86))
-        self.draw_button_text("ERASE SCORES", self.font, self.erase_button.left+70, self.erase_button.top+9)
+        x_value = self.erase_button.left+70
+        y_value = self.erase_button.top+9
+        self.draw_button_text("ERASE SCORES", self.font, x_value , y_value)
         if self.difficulty == "mediumhard":
             self.draw_title(70, 50)
         else:

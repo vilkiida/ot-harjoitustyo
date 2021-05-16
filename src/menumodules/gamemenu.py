@@ -12,17 +12,21 @@ class GameMenu:
         screen_width: Lukuarvo, joka kuvaa näytön leveyttä pikseleinä.
         screen: kuvaa pygamen kuvaruutua.
         easy_button: pygamen rect-olio, joka kuvaa valikon easy näppäintä.
-        easy: Tuple, jonka arvot ovat easy tasoisen pelin korkeus, leveys ja miinojen määrä.
+        easy: Tuple, jonka arvot ovat easy tasoisen pelin korkeus, leveys ja
+            miinojen määrä.
         mediumhard_button: pygamen rect-olio, joka kuvaa valikon mediumhard näppäintä.
-        mediumhard: Tuple, jonka arvot ovat mediumhard tasoisen pelin korkeus, leveys ja miinojen määrä.
+        mediumhard: Tuple, jonka arvot ovat mediumhard tasoisen pelin korkeus,
+            leveys ja miinojen määrä.
         expert_button: pygamen rect-olio, joka kuvaa valikon expert näppäintä.
-        expert: Tuple, jonka arvot ovat expert tasoisen pelin korkeus, leveys, ja miinojen määrä.
+        expert: Tuple, jonka arvot ovat expert tasoisen pelin korkeus, leveys,
+            ja miinojen määrä.
         back_button: pygamen rect-olio, joka kuvaa valikon back näppäintä.
         button_color: Tuple, joka kuvaa värikoodina valikon näppäimien väriä.
         background_color: Tuple, joka kuvaa värikoodina valikon taustan väriä.
-        cell_size: Lukuarvo, joka kuvaa yksittäisen miinaharavakentän ruudun kokoa pikseleinä.
+        cell_size: Lukuarvo, joka kuvaa yksittäisen miinaharavakentän ruudun
+            kokoa pikseleinä.
         font: pygame fontti valikon suuremmille teksteille.
-        font_small: pygame fontti valikon pienemmille teksteille. 
+        font_small: pygame fontti valikon pienemmille teksteille.
     """
     def __init__(self):
         """ Luokan kostruktori.
@@ -54,7 +58,8 @@ class GameMenu:
     def left_click(self, position):
         """ Käsittelee vasemman hiiren näppäimen painalluksesta seuraavat toimenpiteet.
         Args:
-            position: Tuple, joka kuvaa koordinaatteja pisteeseen, jossa hiiri oli klikkaus hetkellä
+            position: Tuple, joka kuvaa koordinaatteja pisteeseen, jossa hiiri oli
+                klikkaus hetkellä
         """
         if self.easy_button.collidepoint(position):
             self.setup_game(self.easy, "easy")
